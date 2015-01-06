@@ -14,7 +14,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 group :development do 
   gem 'spring'
-  gem 'quiet_assets'        
+  gem 'quiet_assets'
+  gem 'rails_layout'        
 end
 
 group :production do 

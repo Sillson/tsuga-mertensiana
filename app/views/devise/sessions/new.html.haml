@@ -1,0 +1,25 @@
+.container
+  .row
+    .col-md-4.col-md-offset-4.col-sm-6.col-sm-offset-3
+      = form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :class => 'reg-page'}) do |f|
+        .reg-header
+          %h2 Login
+        .input-group
+          %span.input-group-addon
+          = f.email_field :email, autofocus: true, placeholder: 'Username', class: 'form-control'        
+        .input-group
+          %span.input-group-addon
+          = f.password_field :password, placeholder: 'Password', class: 'form-control'
+        .row
+          .col-md-6
+            %label.checkbox
+              %input{type: "checkbox"}/
+              = f.check_box :remember_me
+              Remember me
+          .col-md-6
+            = f.submit 'Log In', class: 'pull-right'
+        %hr/
+        %p
+          = link_to "Forget your Password?", new_password_path(resource_name)
+        %p
+          = link_to "Sign up", new_user_registration_url

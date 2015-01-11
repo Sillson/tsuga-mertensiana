@@ -6,6 +6,7 @@
     .row
       %p
         GatherContent is annoying. Why not build a resource to list all projects and pull down what you need?
-      %p= @api.get_projects
-
+      - @mash.projects.each do |project|
+        %p
+          = project.name
       

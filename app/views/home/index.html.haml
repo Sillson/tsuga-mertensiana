@@ -14,7 +14,13 @@
             G5 Projects in GatherContent
         .panel-body
           - @user_projects.each do |project|
-            .panel
-              %p
-                = project.name
+            .col-md-6
+              .panel
+                %p
+                  = project.name
+            .col-md-4-offset-6
+              .panel
+                %p
+                  = link_to 'Show details', project_overview_path(:id => project.id)
+
       

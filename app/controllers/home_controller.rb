@@ -9,8 +9,7 @@ class HomeController < ApplicationController
     @user_projects = clean_mash.sort_by {|project| project.name}
   end
 
-  def show
-    mash = Hashie::Mash.new(@api.get_project(@project_id))
-    mash.shift   
+  def project_overview
+    @magic_number = params[:id]
   end
 end

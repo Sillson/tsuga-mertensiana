@@ -1,3 +1,5 @@
+<img src ="http://www.warrenphotographic.co.uk/photography/bigs/01901-Mountain-Hemlock.jpg">
+
 == README
 
 This README would normally document whatever steps are necessary to get the

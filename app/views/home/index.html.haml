@@ -6,7 +6,15 @@
     .row
       %p
         GatherContent is annoying. Why not build a resource to list all projects and pull down what you need?
-      - @mash.projects.each do |project|
-        %p
-          = project.name
+  .jumbotron
+    .row
+      .panel.panel-default
+        .panel-heading
+          %h3
+            G5 Projects in GatherContent
+        .panel-body
+          - @user_projects.each do |project|
+            .panel
+              %p
+                = project.name
       

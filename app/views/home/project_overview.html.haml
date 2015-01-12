@@ -5,6 +5,10 @@
         .panel-heading
           %h3
             Break it down for
-            = @magic_name         
-    %p
-      = @magic_number
+            = @magic_name
+        .panel-body
+          - @page_array.each do |page|
+            .panel
+              %p
+                = page.name         
+    

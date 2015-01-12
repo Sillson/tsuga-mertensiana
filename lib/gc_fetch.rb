@@ -17,5 +17,12 @@ class GatherContentApi
     options = {:body => {'id' => args[0]}, :digest_auth => @auth}
     self.class.post('/' + method.to_s, options)
   end
+
+  # Stuck this in the ApplicationHelper
+  
+  # def create_hash(m)
+  #   by_id = m.group_by(&:id)
+  #   page_hash = m.group_by { |page| by_id[page.parent_id]}
+  # end
 end
 

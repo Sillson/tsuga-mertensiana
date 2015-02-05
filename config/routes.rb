@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   
   root :to => "home#index"
   get 'project_overview', to: 'home#project_overview'
-
+  get 'project_download', to: 'home#project_download'
 end

@@ -10,11 +10,16 @@ class HomeController < ApplicationController
   end
 
   def project_overview
-    @magic_number = params[:id]
-    @magic_name = params[:name]
-    mash = Hashie::Mash.new(@@api.get_pages_by_project(@magic_number))
+    @project_id_number = params[:id]
+    @project_name = params[:name]
+    mash = Hashie::Mash.new(@@api.get_pages_by_project(@project_id_number))
     mash.shift
     @page_array = mash.first.drop(1).flatten!
     @nested_page_array = create_hash(@page_array)
+  end
+
+  def project_download
+    @project_id_number = params[:id]
+    @project_name = params[:name]
   end
 end
